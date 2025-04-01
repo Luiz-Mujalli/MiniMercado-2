@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMercado Online</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Link para o CSS externo -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .carousel img {
+            width: auto;         
+            max-width: 100%;      
+            height: 500px;       
+            display: block;      
+            margin: 0 auto;      
+            object-fit: contain; 
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="bg-laranja text-white text-center p-3">
+        <h1>MiniMercado Online</h1>
+    </header>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">MiniMercado</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu de navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#frutas">Frutas e Verduras</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nao_pereciveis">Não Perecíveis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#higiene">Higiene</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+                    <li class="nav-item"><button class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#loginModal">Login/Cadastro</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://github.com/Luiz-Mujalli/MiniMercado-2/raw/main/Promo%C3%A7%C3%A3o%201.png" class="d-block w-100" alt="Banner promocional 1 com ofertas especiais">
+            </div>
+            <div class="carousel-item">
+                <img src="https://github.com/Luiz-Mujalli/MiniMercado-2/raw/main/Promo%C3%A7%C3%A3o%202.png" class="d-block w-100" alt="Banner promocional 2 com descontos incríveis">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" aria-label="Imagem anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" aria-label="Próxima imagem">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+        </button>
+    </div>
+    
+    <main class="container mt-4">
+        <section id="frutas">
+            <h2>Frutas e Verduras</h2>
+            <p>Produtos frescos e selecionados para sua saúde.</p>
+            <ul>
+                <li>Banana - R$ 5,00/kg</li>
+                <li>Maçã - R$ 6,50/kg</li>
+                <li>Alface - R$ 3,00/unidade</li>
+                <li>Tomate - R$ 4,80/kg</li>
+            </ul>
+        </section>
+        <section id="nao_pereciveis">
+            <h2>Alimentos Não Perecíveis</h2>
+            <p>Essenciais para o seu dia a dia, sempre com qualidade.</p>
+            <ul>
+                <li>Arroz 5kg - R$ 22,00</li>
+                <li>Feijão 1kg - R$ 8,00</li>
+                <li>Macarrão 500g - R$ 5,50</li>
+                <li>Azeite de Oliva 500ml - R$ 20,00</li>
+            </ul>
+        </section>
+        <section id="higiene">
+            <h2>Higiene e Limpeza</h2>
+            <p>Produtos para garantir sua casa limpa e sua saúde protegida.</p>
+            <ul>
+                <li>Sabonete - R$ 2,50/unidade</li>
+                <li>Shampoo 400ml - R$ 15,00</li>
+                <li>Detergente 500ml - R$ 3,50</li>
+                <li>Água Sanitária 1L - R$ 6,00</li>
+            </ul>
+        </section>
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <p>Opções de entrega rápida e retirada na loja.</p>
+            <ul>
+                <li>Entrega Expressa - R$ 10,00</li>
+                <li>Retirada na Loja - Grátis</li>
+                <li>Assinatura Mensal de Entregas - R$ 50,00/mês</li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer class="bg-dark text-white text-center p-3 mt-4">
+        <p>&copy; 2025 MiniMercado Online - Todos os direitos reservados.</p>
+        <p>Contato: contato@minimercado.com</p>
+    </footer>
+    
+    <!-- Modal de Login/Cadastro -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Cadastro de Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome Completo</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="senha" class="form-label">Senha</label>
+                            <input type="password" class="form-control" id="senha" placeholder="Crie uma senha">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
